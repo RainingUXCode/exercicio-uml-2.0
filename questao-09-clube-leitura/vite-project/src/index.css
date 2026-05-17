@@ -1,0 +1,59 @@
+/* src/index.css */
+
+/* 1. Importações obrigatórias da Mantine UI v7 */
+@import "@mantine/core/styles.css";
+@import "@mantine/dates/styles.css";
+@import "@mantine/notifications/styles.css";
+
+/* 2. Diretivas base do Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3. Ajustes Globais e Estética Profissional */
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Impede que os ícones do seletor da Mantine cresçam de forma descontrolada */
+  svg,
+  img {
+    display: inline-block;
+    max-width: 100%;
+  }
+}
+
+/* 4. Estilização Fina dos Componentes Mantine */
+.mantine-Tabs-list {
+  @apply border-b border-slate-200 gap-2 !important;
+}
+
+.mantine-Tabs-tab {
+  @apply px-4 py-2.5 rounded-t-lg font-medium transition-all duration-200 !important;
+  @apply hover:bg-slate-100 hover:text-slate-900 !important;
+}
+
+.mantine-Tabs-tab[data-active] {
+  @apply bg-white border-t border-x border-slate-200 text-emerald-600 font-semibold shadow-sm !important;
+}
+
+.mantine-Card-root {
+  @apply shadow-sm hover:shadow-md transition-shadow duration-200 bg-white border-slate-200 p-6 rounded-lg !important;
+}
+
+.mantine-Table-table {
+  @apply border-collapse w-full !important;
+}
+
+.mantine-Table-th {
+  @apply bg-slate-100 text-slate-700 font-semibold p-3 text-left border-b border-slate-200 !important;
+}
+
+.mantine-Table-td {
+  @apply p-3 border-b border-slate-100 text-slate-600 !important;
+}
